@@ -1,7 +1,7 @@
-#include<iostream>;
+#include<iostream>
 using namespace std;
 int fibonacci (int n){
-    int a=0,
+    int a=0;
     int b=1;
     int count =0;
     if (n==0){
@@ -9,11 +9,18 @@ int fibonacci (int n){
     }else if (n==1){
         return b;
     }else{
-        while (/* condition */)
+        for (int i = 0; i < n; i++)
         {
-            /* code */
+            count =a+b;
+            a=b;
+            b=count;
         }
-        
+        return count;
     }
-    
+}
+int main(){
+    int n;
+    cout<<"Enter the number of terms you want in the Fibonacci sequence: ";
+    cin>>n;
+    cout<<fibonacci(n);
 }
